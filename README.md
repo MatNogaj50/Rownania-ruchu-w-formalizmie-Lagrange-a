@@ -1,4 +1,4 @@
-# Instrukcja obsługi
+# Instrukcja
 
 ## Konfiguracja środowiska:
 
@@ -16,11 +16,11 @@ Za uruchomienie programu odpowiedzialny jest plik particles.py, który uruchamia
 
 
 
-Plik ten jest importowany przez solver.c, który odpowiada za przeprowadzanie obliczeń przy uzyciu metody Rungego-Kutty 4. rzędu. Pliki w C są kompilowane w locie.  
+Plik ten jest importowany przez solver.c, który odpowiada za przeprowadzanie obliczeń przy użyciu metody Rungego-Kutty 4. rzędu. Pliki w C są kompilowane w locie.  
 
 
 
-Warunki począstkowe są ustawiane jednakowo dla wszystkich lagrangianów, co prowadzi potencjalnie do problemów, gdyż zmienne uogólnione niekoniecznie są położeniem we spółrzednych kartezjańskich, a projekt skupiał się na dodaniu możliwości dopisywania kolejnych lagrangianów bez zapewnienia konwersji na zmienne x, y.  
+Warunki początkowe są ustawiane jednakowo dla wszystkich lagrangianów, co prowadzi potencjalnie do problemów, gdyż zmienne uogólnione niekoniecznie są położeniem we współrzędnych kartezjańskich - projekt skupiał się na dodaniu możliwości dopisywania kolejnych lagrangianów bez zapewnienia konwersji na zmienne x, y.  
 
 
 
@@ -28,7 +28,7 @@ Na koniec pliki odpowiedzialne za animację oraz obliczenia współpracują przy
 
 ## Uruchamianie
 
-Aby uruchomić program, wystarczy użyć komendy:
+Aby uruchomić program, wystarczy w folderze run/ użyć komendy:
 
 ~~~
 
@@ -44,4 +44,4 @@ W celu przetestowania własnego lagrangianu należy dodać odpowiadający mu cas
 
 ## Uwagi końcowe
 
-Ze względu na brak uwzględnienia rodzaju zmiennych uogólnionych przy ustalaniu warunków początkowych oraz wyświetlanie wykresu we współrzędnych uogólnionych zaleca się użycia większej liczby ciał, np. 10, wtedy interpretacja poprawności wyników jest prostsza oraz jest większa pewność, że chociaż część cząstek zostanie utworzona z warunkami początkowymi, które nie spowodują szybkich i nieintuicyjnych błędów w symulacji (np. znikanie cząstek).  
+Ze względu na brak uwzględnienia rodzaju zmiennych uogólnionych przy ustalaniu warunków początkowych oraz wyświetlanie wykresu we współrzędnych uogólnionych zamiast kartezjańskich zaleca się użycia większej liczby ciał, np. 10, wtedy interpretacja poprawności wyników jest prostsza oraz jest większa pewność, że chociaż część cząstek zostanie utworzona z warunkami początkowymi, które nie spowodują szybkich i nieintuicyjnych błędów w symulacji (np. znikanie cząstek).  
